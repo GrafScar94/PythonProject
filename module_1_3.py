@@ -8,10 +8,10 @@ is_student = True
 print(is_student, type(is_student))
 print()
 name = 'Руслан'
-print("Имя: " + name)
+print("Имя:", name)
 age = 29
-print("Возраст: " + str(age))
+print("Возраст:", age)
 age = age + 1
-print("Новый возраст: " + str(age))
+print("Новый возраст:", age)
 is_student = True
-print("Студент: " + str(is_student))
+print("Студент:", is_student)
