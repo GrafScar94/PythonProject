@@ -37,7 +37,7 @@ class House:
     def __add__(self, other):
         if not isinstance(other, int):
             raise ArithmeticError("Правый операнд должен быть типом int")
-        return self.number_of_floors + other
+        return House(self.name, self.number_of_floors + other)
 
     def __iadd__(self, other):
         if not isinstance(other, (int, House)):
