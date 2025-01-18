@@ -19,20 +19,17 @@ class Shop:
         file = open(self.__file_name, 'r')
         st = file.read()
         file.close()
-        print(f'{st}')
+        return st
 
     def add(self, *products):
-        for i in products:
-            s = (str(i))
-            file = open(self.__file_name, 'r')
-            f = file.read()
-            file.close()
-            if s in f:
-                print(f'Продукт {s} уже был в магазине, его общий вес')
-            else:
-                file = open(self.__file_name, 'a')
-                file.write(f'\n{s}')
-                file.close()
+        with open(self.__file_name, 'a') as file:
+            for i in products:
+                s = (str(i))
+                f = Shop.get_products(self)
+                if s in f:
+                    print(f'Продукт {s} уже был в магазине, его общий вес')
+                else:
+                    file.write(f'{s}\n')
 
 
 s1 = Shop()
