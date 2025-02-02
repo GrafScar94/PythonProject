@@ -6,7 +6,7 @@ first_result = [len(x) for x in first_strings if len(x) >= 5]
 second_result = [(x, y) for x in first_strings for y in second_strings if len(x) == len(y)]
 third_strings.extend(first_strings)
 third_strings.extend(second_strings)
-third_result = {x: len(x) for x in third_strings if not len(x) % 2}
+third_result = {x: len(x) for x in third_strings if len(x) % 2 == 0}
 
 print(first_result)
 print(second_result)
